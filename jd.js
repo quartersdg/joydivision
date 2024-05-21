@@ -13,12 +13,6 @@ const drawLine = (ctx, textCtx, y, width) => {
         let textData = textCtx.getImageData(x, y, 20, 20).data
         let avg = textData.reduce((sum, value) => sum + value, 0) / textData.length
 
-        /*
-        if (Math.floor(Math.random() * 100) == 88) {
-            w = 88
-            console.log(avg)
-        }
-        */
         poly.lineTo(x, y - w - avg);
         x = x + step;
     }
@@ -43,7 +37,7 @@ const draw = words => {
     ctx.canvas.height = height;
 
     const fontHeight = Math.floor((height / words.length) * 0.85)
-    textCtx.font = `${fontHeight}px serif`;
+    textCtx.font = `${fontHeight}px`;
     console.log(ctx.font);
     textCtx.textAlign = "center"
 
