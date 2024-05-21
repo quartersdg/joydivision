@@ -37,7 +37,7 @@ const draw = words => {
     ctx.canvas.height = height;
 
     const fontHeight = Math.floor((height / words.length) * 0.85)
-    textCtx.font = `${fontHeight}px`;
+    textCtx.font = `${fontHeight}px serif`;
     console.log(ctx.font);
     textCtx.textAlign = "center"
 
